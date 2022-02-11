@@ -14,9 +14,10 @@ class CreatePricesTable extends Migration
     public function up()
     {
         Schema::create('prices', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id()->unique();
+            $table->uuid('guid');
             $table->decimal('price',  8, 2);
-            $table->uuid('product_id');
+            $table->unsignedBigInteger('product_id');
 
             $table->foreign('product_id')->references('id')->on('products');
             $table->timestamps();
