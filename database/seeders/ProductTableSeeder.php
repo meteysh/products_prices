@@ -8,8 +8,8 @@ use Illuminate\Database\Seeder;
 
 class ProductTableSeeder extends Seeder
 {
-    const COUNT_PRICES =3;
-    const COUNT_PRODUCTS =10;
+    const COUNT_PRICES =100;
+    const COUNT_PRODUCTS =10000;
 
     /**
      * Run the database seeds.
